@@ -1,4 +1,4 @@
-!#/bin/sh
+#!/bin/bash
 apt-get update
 apt-get -y install python-gevent python-pip python-m2crypto python-setuptools
 mkdir /etc/shadowsocks -p
@@ -12,5 +12,5 @@ echo "{\
 \"fast_open\":false,\
 \"workers\":1\
 }" > /etc/shadowsocks/config.json
-sed -i 's/cleanup/reset/g' /usr/local/lib/python2.7/dist-packages/shadowsocks/crypto/openssl.py
 pip install shadowsocks
+sed -i 's/cleanup/reset/g' /usr/local/lib/python2.7/dist-packages/shadowsocks/crypto/openssl.py

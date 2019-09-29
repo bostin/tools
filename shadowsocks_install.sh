@@ -13,6 +13,6 @@ echo "{\
 \"workers\":1\
 }" > /etc/shadowsocks/config.json
 pip install wheel
-pip install --upgrade setuptools
+# pip install --upgrade setuptools
 pip install shadowsocks
 sed -i 's/cleanup/reset/g' /usr/local/lib/python2.7/dist-packages/shadowsocks/crypto/openssl.py
